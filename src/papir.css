@@ -1,0 +1,140 @@
+/**
+ * =============================================================================
+ * Base
+ * =============================================================================
+ */
+
+/**
+ * Normalize every element.
+ */
+* {
+	text-shadow:none !important;
+	color:#000 !important;
+	background:transparent !important;
+	box-shadow:none !important;
+}
+
+/**
+ * Set page margins.
+ */
+@page {
+	margin:0.5cm;
+}
+
+/**
+ * =============================================================================
+ * Typography
+ * =============================================================================
+ */
+
+/**
+ * Serif typefaces are easier on eyes when read on paper.
+ */
+html {
+	font-family:serif;
+}
+
+/**
+ * Avoid page break inside these elements and set them whole on one page.
+ */
+pre, blockquote, tr, img {
+	page-break-inside:avoid;
+}
+
+/**
+ * Print headers and their following content together on one page.
+ */
+h2, h3, h4, h5, h6 {
+	page-break-after:avoid;
+}
+
+/**
+ * Set sensible defaults for content orphans and widows.
+ */
+p, h2, h3 {
+	orphans:3; widows:3;
+}
+
+/**
+ * Visually offset `pre` and `blockquote` elements.
+ */
+pre, blockquote {
+	border:1px solid #999;
+}
+
+/**
+ * =============================================================================
+ * Links
+ * =============================================================================
+ */
+
+/**
+ * Visually offset every link on page by setting underline.
+ */
+a, a:visited {
+	text-decoration:underline;
+}
+
+/**
+ * 1. Display link for `a` and title for `abbr` on the right side of the element.
+ * 2. Prevent long URLs from breaking out of container.
+ */
+a[href]:after,
+abbr[title]:after {
+	font-size:63%; /* 1 */
+	word-break:break-all; /* 2 */
+	word-break:break-word; /* 2 */
+	hyphens:auto; /* 2 */
+}
+a[href]:after {
+	content:" (" attr(href) ")";
+}
+abbr[title]:after {
+	content:" (" attr(title) ")";
+}
+
+/**
+ * Don't show links for images or JavaScript/internal links.
+ */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+	content:'';
+}
+
+/**
+ * =============================================================================
+ * Embedded content
+ * =============================================================================
+ */
+
+/**
+ * Keep image width to the maximum of its container.
+ */
+img {
+	max-width:100% !important;
+}
+
+/**
+ * =============================================================================
+ * Tables
+ * =============================================================================
+ */
+
+/**
+ * Print table header and footer at every page.
+ */
+thead {
+	display:table-header-group;
+}
+tfoot {
+	display:table-footer-group;
+}
+
+/**
+ * Visually offset table headers and footers.
+ */
+th, td {
+	padding:4px;
+	border-bottom:1px solid #333;
+}
