@@ -1,21 +1,34 @@
 # papir.css
 
-Sensible print styling.
+[![Build Status][ci-img]][ci]
 
-## Installation
+Sensible print stylesheet.
+
+## Install
 
 ```sh
-bower install niksy/papir.css
+npm install papir.css --save
 ```
 
 ## Usage
 
+```css
+@import url('papir.css');
+```
+
 To keep usability and display problems at minimum, it’s best to use this package only with [Normalize](http://necolas.github.io/normalize.css/) and [Rationalize](https://github.com/niksy/rationalize.css), without additional style reset, such as [Eric Meyer’s Reset CSS](http://meyerweb.com/eric/tools/css/reset/).
+
+## Test
+
+For manual tests, run `npm run test:manual:local` and open <http://localhost:9000/> in your browser.
 
 ## Browser support
 
-Tested in IE8 and all modern browsers.
+Tested in IE9+ and all modern browsers.
 
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
+
+[ci]: https://travis-ci.org/niksy/papir.css
+[ci-img]: https://travis-ci.org/niksy/papir.css.svg?branch=master

@@ -1,20 +1,27 @@
-/*! papir.css 0.1.0 - Sensible print styling. | Author: Ivan Nikolić, 2014 | License: MIT */
+/* stylelint-disable selector-no-qualifying-type */
+/* We need to select large set of elements at the same time */
+
+/**
+ * =============================================================================
+ * Base
+ * =============================================================================
+ */
+
 /**
  * Normalize every element.
  */
 * {
-	text-shadow:none !important;
-	color:#000 !important;
-	background:transparent !important;
-	-webkit-box-shadow:none !important;
-	        box-shadow:none !important;
+	text-shadow: none !important;
+	color: #000 !important;
+	background: transparent !important;
+	box-shadow: none !important;
 }
 
 /**
  * Set page margins.
  */
 @page {
-	margin:0.5cm;
+	margin: 0.5cm;
 }
 
 /**
@@ -27,35 +34,35 @@
  * Serif typefaces are easier on eyes when read on paper.
  */
 html {
-	font-family:serif;
+	font-family: serif;
 }
 
 /**
  * Avoid page break inside these elements and set them whole on one page.
  */
 pre, blockquote, tr, img {
-	page-break-inside:avoid;
+	page-break-inside: avoid;
 }
 
 /**
  * Print headers and their following content together on one page.
  */
 h2, h3, h4, h5, h6 {
-	page-break-after:avoid;
+	page-break-after: avoid;
 }
 
 /**
  * Set sensible defaults for content orphans and widows.
  */
 p, h2, h3 {
-	orphans:3; widows:3;
+	orphans: 3; widows: 3;
 }
 
 /**
  * Visually offset `pre` and `blockquote` elements.
  */
 pre, blockquote {
-	border:1px solid #999;
+	border: 1px solid #999;
 }
 
 /**
@@ -68,7 +75,7 @@ pre, blockquote {
  * Visually offset every link on page by setting underline.
  */
 a, a:visited {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 /**
@@ -77,19 +84,16 @@ a, a:visited {
  */
 a[href]:after,
 abbr[title]:after {
-	font-size:63%; /* 1 */
-	word-break:break-all; /* 2 */
-	word-break:break-word; /* 2 */
-	-webkit-hyphens:auto;
-	   -moz-hyphens:auto;
-	    -ms-hyphens:auto;
-	        hyphens:auto; /* 2 */
+	font-size: 63%; /* 1 */
+	word-break: break-all; /* 2 */
+	word-break: break-word; /* 2 */
+	hyphens: auto; /* 2 */
 }
 a[href]:after {
-	content:" (" attr(href) ")";
+	content: " (" attr(href) ")";
 }
 abbr[title]:after {
-	content:" (" attr(title) ")";
+	content: " (" attr(title) ")";
 }
 
 /**
@@ -98,7 +102,7 @@ abbr[title]:after {
 .ir a:after,
 a[href^="javascript:"]:after,
 a[href^="#"]:after {
-	content:'';
+	content: '';
 }
 
 /**
@@ -111,7 +115,7 @@ a[href^="#"]:after {
  * Keep image width to the maximum of its container.
  */
 img {
-	max-width:100% !important;
+	max-width: 100% !important;
 }
 
 /**
@@ -124,16 +128,18 @@ img {
  * Print table header and footer at every page.
  */
 thead {
-	display:table-header-group;
+	display: table-header-group;
 }
 tfoot {
-	display:table-footer-group;
+	display: table-footer-group;
 }
 
 /**
  * Visually offset table headers and footers.
  */
 th, td {
-	padding:4px;
-	border-bottom:1px solid #333;
+	padding: 4px;
+	border-bottom: 1px solid #333;
 }
+
+/* stylelint-enable selector-no-qualifying-type */
