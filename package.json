@@ -1,6 +1,6 @@
 {
   "name": "papir.css",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Sensible print stylesheet.",
   "main": "index.css",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
