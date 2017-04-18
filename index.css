@@ -10,7 +10,9 @@
 /**
  * Normalize every element.
  */
-* {
+*,
+*:before,
+*:after {
 	text-shadow: none !important;
 	color: #000 !important;
 	background: transparent !important;
